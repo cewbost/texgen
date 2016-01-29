@@ -41,7 +41,7 @@ $(bin_dir)libSDL2.so:
 	cd $(SDL_dir) && ./configure && $(MAKE)
 	mkdir -p include/SDL2
 	cp -f $(SDL_dir)/include/*.h include/SDL2/
-	cp -f $(SDL_dir)/build/.libs/{$(SDL_libfiles)} $(bin_dir)
+	cp -f $(SDL_dir)/build/.libs/$(SDL_libfiles) $(bin_dir)
 
 #rule for generating assembly code
 asm: $(asm_files)

@@ -23,7 +23,7 @@ sqlib = $(squirrel)lib/libsquirrel.a
 sqstdlib = $(squirrel)lib/libsqstdlib.a
 SDL_dir = SDL2-2.0.4/
 
-SDL_libfiles = libSDL2.so,libSDL2-2.0.so.0,libSDL2-2.0.so.0.4.0
+SDL_libfiles = {libSDL2.so,libSDL2-2.0.so.0,libSDL2-2.0.so.0.4.0}
 
 ifeq ($(target),debug)
     binary = $(debug_binary)
