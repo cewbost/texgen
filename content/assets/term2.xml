@@ -1,0 +1,4 @@
+<Material link="term_common">
+  <Shader source="terminal_font_shader"/>
+  <Sampler name="fontMap" map="terminal_font_texture"/>
+</Material>

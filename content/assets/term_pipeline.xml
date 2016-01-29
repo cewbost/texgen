@@ -1,0 +1,12 @@
+<Pipeline>
+  <Setup>
+  </Setup>
+	<CommandQueue>
+    <Stage id="Clear">
+      <ClearTarget depthBuf="true" colBuf0="true" colBuf1="true" colBuf2="true"/>
+    </Stage>
+    <Stage id="Overlay">
+      <DrawOverlays context="OVERLAY"/>
+    </Stage>
+	</CommandQueue>
+</Pipeline>

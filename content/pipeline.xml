@@ -1,0 +1,14 @@
+<Pipeline>
+  <Setup>
+  </Setup>
+	<CommandQueue>
+    <Stage id="Stage1">
+      <SwitchTarget target=""/>
+      <ClearTarget depthBuf="true" colBuf0="true" colBuf1="true" colBuf2="true"/>
+      <DrawGeometry context="RENDER"/>
+    </Stage>
+    <Stage id="Stage2">
+      <DoForwardLightLoop context="LIGHT"/>
+    </Stage>
+	</CommandQueue>
+</Pipeline>
