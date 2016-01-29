@@ -7,8 +7,8 @@ dep_dir = dep/
 asm_dir = asm/
 lib_dir = lib/
 
-libraries = -lSDL2 -lGL -lHorde3D -lsquirrel -lsqstdlib
-def_c_options = -isystem./include/ -isystem./include/SDL2/ -std=c++11 -Wall -D_SQ64 -DSQUSEDOUBLE
+libraries = -lSDL2 -lGL -lHorde3D -lsquirrel -lsqstdlib -ldl
+def_c_options = -isystem./include/ -isystem./include/SDL2/ -pthread -std=c++11 -Wall -D_SQ64 -DSQUSEDOUBLE
 
 debug_binary = bin/debug/texgen
 debug_dir = bin/debug/
