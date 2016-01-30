@@ -16,7 +16,10 @@ This application has the following dependencies:
 
 These libraries are included as code in the project repository.
 
-##building
-Just run make. Currently works only on Linux. Requires gcc, make and cmake 2.6.
+## Building
+Just run make. Currently works only on Linux. Requires gcc 4.8, make and cmake 2.6.
 
 Please excuse the build-system, it's a quickly thrown together mess of makefiles.
+
+## Instructions
+Build and run the program. An empty black screen should appear.
