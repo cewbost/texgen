@@ -1053,18 +1053,13 @@ namespace
     if(!_getArrayf<4>(vm, color, 3))
       return sq_throwerror(vm, _SC("malformed argument 2 in fillBackground"));
     
+    sq_getinteger(vm, 4, &src);
+    sq_getinteger(vm, 5, &ch);
+    
     if(sq_gettop(vm) == 6)
-    {
-      sq_getinteger(vm, 4, &mask);
-      sq_getinteger(vm, 5, &src);
-      sq_getinteger(vm, 6, &ch);
-    }
+      sq_getinteger(vm, 6, &mask);
     else
-    {
       mask = 0xf;
-      sq_getinteger(vm, 4, &src);
-      sq_getinteger(vm, 5, &ch);
-    }
     
     if(!_isValidChannel(ch))
       return sq_throwerror(vm, _SC("invalid channel"));
