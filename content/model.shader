@@ -173,7 +173,7 @@ void main(void)
   while(sampl < cutof)
   {
     cutof -= 0.03;
-    newTexCoords -= shiftVec * 0.001;
+    newTexCoords -= shiftVec * 0.00075;
     sampl = texture2D(normal_map, newTexCoords).a;
   }
 

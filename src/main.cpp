@@ -26,7 +26,7 @@ int main(int argc, char** argv)
   freopen(Common::path("log.txt").c_str(), "wb", stdout);
   #endif
   
-  freopen(Common::path("log.out").c_str(), "wb", stderr);
+  //freopen(Common::path("error.").c_str(), "wb", stderr);
   
   try
   {
