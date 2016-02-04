@@ -214,9 +214,11 @@ namespace Viewer
           return;
         case SDLK_KP_PLUS:
           camera_zoom_event |= 2;
+          SDL_StopTextInput();
           break;
         case SDLK_KP_MINUS:
           camera_zoom_event |= 1;
+          SDL_StopTextInput();
           break;
         case SDLK_BACKSPACE:
           if(event.key.keysym.mod & KMOD_CTRL)
@@ -267,9 +269,11 @@ namespace Viewer
         {
         case SDLK_KP_PLUS:
           camera_zoom_event &= ~2;
+          SDL_StartTextInput();
           break;
         case SDLK_KP_MINUS:
           camera_zoom_event &= ~1;
+          SDL_StartTextInput();
           break;
         default:
           break;
