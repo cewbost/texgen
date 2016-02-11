@@ -16,7 +16,7 @@ function loadPreset(idx, seed)
   --idx
   if(!(idx in presets))
   {
-    print("preset " + idx + "does not exist.")
+    print("preset " + (idx + 1) + " does not exist.")
     return
   }
   
