@@ -2,6 +2,7 @@
 #define TEX_OP_H
 
 #include <bitset>
+#include <vector>
 
 #include "texture.h"
 #include "blurfilter.h"
