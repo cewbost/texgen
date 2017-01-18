@@ -5,12 +5,12 @@ function preset1(seed)
 
   seedRandomDevice(1, seed)
   
-  if("tex" in this)
-    destroyTexture(tex)
+  if("norm_tex" in this)
+    destroyTexture(norm_tex)
   if("col_tex" in this)
     destroyTexture(col_tex)
 
-  tex <- createTexture(256, 256)
+  norm_tex <- createTexture(256, 256)
   local noisemap = createTexture(64, 64)
 
   generateNoise(noisemap, 1)
@@ -29,9 +29,9 @@ function preset1(seed)
       bl.writen(contrib, 'b')
   }
 
-  writeChannelb(tex, bl, 0x8)
+  writeChannelb(norm_tex, bl, 0x8)
 
-  warpInplace(tex, noisemap, 250.)
+  warpInplace(norm_tex, noisemap, 250.)
 
   col_tex <- createTexture(256, 256)
   fillTexture(col_tex, col1)
@@ -40,13 +40,13 @@ function preset1(seed)
   makeTurbulenceInplace(noisemap, 4)
   fillWithBlendChannel(col_tex, col2, noisemap, 8, 0xf)
 
-  fillWithBlendChannel(col_tex, [0.2, 0.2, 0.2, 1.0], tex, 8, 0xf)
+  fillWithBlendChannel(col_tex, [0.2, 0.2, 0.2, 1.0], norm_tex, 8, 0xf)
 
-  linFilter(tex, 0., 1., 1., 0., 0x8)
+  linFilter(norm_tex, 0., 1., 1., 0., 0x8)
   //fillTexture(tex, [0.5, 0.5, 0.5, 1.0])
-  makeNormalMap(tex, 1.5)
+  makeNormalMap(norm_tex, 1.5)
 
-  bindSampler("normal_map", tex)
+  bindSampler("normal_map", norm_tex)
   bindSampler("color_map", col_tex)
   
   destroyTexture(noisemap)
