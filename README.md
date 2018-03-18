@@ -16,6 +16,12 @@ This application has the following dependencies:
 
 These libraries are included as code in the project repository. The reason for this is that the libraries used have some slight modifications. In particular SDL2 has a bug in it's Wayland support which has been reported, but not yet pushed to the release branch. Horde3d and squirrel also has some added features.
 
+## Examples
+
+![sample 1](sample1.png)
+
+![sample 2](sample2.png)
+
 ## Building
 Just run make. Currently works only on Linux. Requires gcc 4.8, make and cmake 2.6.
 
